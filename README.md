@@ -1,3 +1,4 @@
 # web2020-midterm-Guys
-V??ng Kim Ch� 44.01.104.065
+Vương Kim Chí 44.01.104.065
 
+Vu Thanh Hải 44.01.104.078
