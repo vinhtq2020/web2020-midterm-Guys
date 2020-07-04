@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th7 04, 2020 lúc 04:28 AM
+-- Thời gian đã tạo: Th7 04, 2020 lúc 05:23 AM
 -- Phiên bản máy phục vụ: 10.4.11-MariaDB
 -- Phiên bản PHP: 7.4.5
 
@@ -67,16 +67,16 @@ CREATE TABLE `khoa` (
 --
 
 INSERT INTO `khoa` (`MaKhoa`, `TenKhoa`, `NamThanhLap`) VALUES
-(1, 'CNTT', 1989),
-(2, 'Tâm Lí Học', 1990),
+(1, 'Công nghệ thông tin', 1972),
+(2, 'Tâm Lí Học', 1992),
 (3, 'Giáo Dục Mầm Non', 1991),
-(4, 'CNTT-Ngôn Ngữ Nhật', 1889),
-(5, 'Luật', 1880),
+(4, 'Ngôn ngữ Anh', 1881),
+(5, 'Ngôn ngữ Pháp', 1885),
 (6, 'Giáo Dục Thể Chất', 1945),
 (7, 'Hóa', 1946),
 (8, 'Toán', 1985),
-(9, 'Lý', 1986),
-(10, 'Hớt tóc', 1969);
+(9, 'Ngôn ngữ Nhật', 1986),
+(10, 'Sư phạm Anh', 1971);
 
 -- --------------------------------------------------------
 
@@ -125,13 +125,13 @@ CREATE TABLE `monhoc` (
 INSERT INTO `monhoc` (`MaMH`, `TenMH`, `SoTC`) VALUES
 (1, 'Quy Hoạch Tuyến Tính', 3),
 (2, 'Hớt Tóc Nâng Cao', 5),
-(3, 'Lập Trình Nâng Cao', 4),
-(4, 'Hóa đại cương', 3),
-(5, 'Lý đại cương', 3),
-(6, 'Quy Luật Toán học và mối quan hệ với vũ trụ', 6),
-(7, 'Dạy trẻ tập đọc', 4),
+(3, 'Lập Trình Nâng Cao', 2),
+(4, 'Hóa đại cương', 1),
+(5, 'Lý đại cương', 2),
+(6, 'Quy Luật Toán học và mối quan hệ với vũ trụ', 5),
+(7, 'Dạy trẻ tập đọc', 2),
 (8, 'Cử Tạ', 2),
-(9, 'Tâm lý học đại cương', 5),
+(9, 'Tâm lý học đại cương', 4),
 (10, 'Lập trình hướng đối tượng', 3);
 
 -- --------------------------------------------------------
