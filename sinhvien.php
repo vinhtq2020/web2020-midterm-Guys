@@ -25,21 +25,23 @@ include_once('DataProvider.php');
         <tr>
             <td>Ma SV</td>
             <td>Ten SV</td>
-        
+            <td>Ngay Sinh</td>
+            <td>Email</td>
+            <td>Lớp</td>
         </tr>
         <?php
         
-        $qr="select * from sinhvien where sinhvien.MaSV=$masv";
+        $qr="select * from sinhvien,lop where sinhvien.MaLop=lop.MaLop AND sinhvien.MaSV=$masv";
         $result=DataProvider::ExecuteQuery($qr);
         
         while($row=mysqli_fetch_array($result)){
         ?>
         <tr style="margin:20px !important">
-            <td><?php echo $row['MaSV'] ?></td>
-        
+            <td><?php echo $row['MaSV'] ?></td>  
             <td><?php echo $row['HoTen'] ?></td>
-            
-            
+            <td><?php echo $row['NgaySinh'] ?></td>
+            <td><?php echo $row['Email'] ?></td>
+            <td><?php echo $row['TenLop'] ?></td>
         </tr>
         <?php
         }

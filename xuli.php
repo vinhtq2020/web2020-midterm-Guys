@@ -8,7 +8,7 @@ include_once('DataProvider.php');
         <tr>
             <td>STT</td>
             <td>Ten sv</td>
-            <td></td>
+            <td colspan="3"></td>
             
         </tr>
         <?php
@@ -33,7 +33,8 @@ include_once('DataProvider.php');
         
             <td><?php echo $row['HoTen'] ?></td>
             <td><a href="sinhvien.php?MaSV=<?php echo $row['MaSV'] ?>">Xem</a></td>
-            
+            <td><a href="suasinhvien.php?MaSV=<?php echo $row['MaSV'] ?>">Sửa</a></td>
+            <td><a href="xoasinhvien.php?MaSV=<?php echo $row['MaSV'] ?>">Xóa</a></td>
         </tr>
         <?php
         }
