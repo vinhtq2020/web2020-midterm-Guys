@@ -25,6 +25,7 @@ include_once('DataProvider.php');
             <td>Ma khoa</td>
             <td>Ten khoa</td>
             <td>Nam thanh lap</td>
+            <td></td>
         </tr>
         <?php
         
@@ -38,11 +39,14 @@ include_once('DataProvider.php');
         
             <td><?php echo $row['TenKhoa'] ?></td>
             <td><?php echo $row['NamThanhLap'] ?></td>
-            <td><a href="themkhoa.php?makhoa=<?php echo $row['MaKhoa'] ?>" class="btn btn-primary">Xem</a></td>
+            <td><a href="suakhoa.php?MaKhoa=<?php echo $row['MaKhoa'] ?>" class="btn btn-primary">Sua</a></td>
         </tr>
         <?php
         }
         ?>
+        <tr>
+        <td colspan="4"><a href="themkhoa.php" class="btn btn-primary">Them</a></td>
+        </tr>
     </table>
 
 </body>

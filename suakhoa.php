@@ -1,12 +1,14 @@
 <html>
 <?php
 include_once('DataProvider.php');
+$makhoa=$_GET['MaKhoa'];
 ?>
 <?php
-if(isset($_REQUEST['btnthem'])){
-    $tenkhoa=$_POST['txtten'];
-    $namthanhlap=$_POST['txtnam'];
-    $qr="INSERT INTO `khoa` (`MaKhoa`, `TenKhoa`, `NamThanhLap`) VALUES (NULL, '$tenkhoa', '$namthanhlap');";
+if(isset($_REQUEST['btnsua'])){
+    $tenkhoa=$_POST['ten'];
+    $namthanhlap=$_POST['nam'];
+    $qr="UPDATE khoa SET TenKhoa='$tenkhoa', NamThanhLap='$namthanhlap' where MaKhoa=$makhoa;";
+    echo $qr;
     DataProvider::ExecuteQuery($qr);
     header("location:khoa.php");
 }
@@ -28,26 +30,35 @@ if(isset($_REQUEST['btnthem'])){
     }
 </style>
 <body>
-<form action="" method="post">
-<h3 class="text-center">THEM KHOA</h3>
+<form method="POST">
+<h3 class="text-center">SUA KHOA</h3>
     <table class="table-bordered text-center" style="margin:0 auto;width:50%">
         <tr>
-            
+            <td>Ma khoa</td>
             <td>Ten khoa</td>
-            <td><input name="txtten" type="text"></td>
+            <td>Nam thanh lap</td>
         </tr>
+        <?php
         
+        $qr="select * from khoa where MaKhoa=$makhoa";
+        $result=DataProvider::ExecuteQuery($qr);
         
-        <tr>
-        <td>Nam thanh lap</td>
-        <td><input name="txtnam" type="number"></td>
+        while($row=mysqli_fetch_array($result)){
+        ?>
+        <tr style="margin:20px !important">
+            <td><?php echo $row['MaKhoa'] ?></td>
+        
+            <td><input name="ten" value="<?php echo $row['TenKhoa'] ?>"></td>
+            <td><input name="nam" value="<?php echo $row['NamThanhLap'] ?>"></td>
         </tr>
+        <?php
+        }
+        ?>
         <tr>
-            <td colspan="2"><button  name="btnthem" type="submit">Them</button></td>
+        <td colspan="3"><button name="btnsua" class="btn btn-primary">Sua</button></td>
         </tr>
     </table>
+
 </form>
-
-
 </body>
 </html>
