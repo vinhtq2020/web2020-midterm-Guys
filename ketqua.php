@@ -2,7 +2,6 @@
 <?php
 include_once('DataProvider.php');
 ?>
-    <?php include_once('nav.php'); ?>
 
 <div >
     <h3 class="text-center">ĐIỂM SINH VIÊN</h3>

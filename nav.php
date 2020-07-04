@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <nav>
+    <nav style="display: block !important;">
         <li><a href="locsinhvien.php">Sinh Viên</a></li>
         <li><a href="khoa.php">Khoa</a></li>
         <li><a href="monhoc.php">Môn học</a></li>
