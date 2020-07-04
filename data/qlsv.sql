@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th7 04, 2020 lúc 05:23 AM
+-- Thời gian đã tạo: Th7 04, 2020 lúc 05:27 AM
 -- Phiên bản máy phục vụ: 10.4.11-MariaDB
 -- Phiên bản PHP: 7.4.5
 
@@ -123,16 +123,16 @@ CREATE TABLE `monhoc` (
 --
 
 INSERT INTO `monhoc` (`MaMH`, `TenMH`, `SoTC`) VALUES
-(1, 'Quy Hoạch Tuyến Tính', 3),
-(2, 'Hớt Tóc Nâng Cao', 5),
+(1, 'Quy Hoạch Tuyến Tính', 5),
+(2, 'Hớt Tóc Nâng Cao', 6),
 (3, 'Lập Trình Nâng Cao', 2),
 (4, 'Hóa đại cương', 1),
 (5, 'Lý đại cương', 2),
 (6, 'Quy Luật Toán học và mối quan hệ với vũ trụ', 5),
-(7, 'Dạy trẻ tập đọc', 2),
+(7, 'Dạy trẻ tập đọc', 3),
 (8, 'Cử Tạ', 2),
-(9, 'Tâm lý học đại cương', 4),
-(10, 'Lập trình hướng đối tượng', 3);
+(9, 'Tâm lý học đại cương', 2),
+(10, 'Lập trình hướng đối tượng', 4);
 
 -- --------------------------------------------------------
 
