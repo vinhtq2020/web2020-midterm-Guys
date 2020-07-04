@@ -39,13 +39,14 @@ include_once('DataProvider.php');
         
             <td><?php echo $row['TenKhoa'] ?></td>
             <td><?php echo $row['NamThanhLap'] ?></td>
-            <td><a href="suakhoa.php?MaKhoa=<?php echo $row['MaKhoa'] ?>" class="btn btn-primary">Sua</a></td>
+            <td><a href="suakhoa.php?MaKhoa=<?php echo $row['MaKhoa'] ?>">Sửa</a>
+            <a href="xoakhoa.php?MaKhoa=<?php echo $row['MaKhoa'] ?>">Xóa</a></td>
         </tr>
         <?php
         }
         ?>
         <tr>
-        <td colspan="4"><a href="themkhoa.php" class="btn btn-primary">Them</a></td>
+        <td colspan="4"><a href="themkhoa.php" class="btn btn-primary">Thêm</a></td>
         </tr>
     </table>
 

@@ -22,9 +22,9 @@ include_once('DataProvider.php');
 <h3 class="text-center">DANH SACH MON HOC</h3>
     <table class="table-bordered text-center" style="margin:0 auto;width:50%">
         <tr>
-            <td>Ma khoa</td>
-            <td>Ten khoa</td>
-            <td>So TC</td>
+            <td>Ma Môn</td>
+            <td>Tên khoa</td>
+            <td>Số tính chỉ</td>
             <td></td>
         </tr>
         <?php
@@ -39,7 +39,8 @@ include_once('DataProvider.php');
         
             <td><?php echo $row['TenMH'] ?></td>
             <td><?php echo $row['SoTC'] ?></td>
-            <td><a href="suamonhoc.php?MaMH=<?php echo $row['MaMH'] ?>" >Sua</a></td>
+            <td><a href="suamonhoc.php?MaMH=<?php echo $row['MaMH'] ?>" >Sửa</a>
+            <a href="xoamonhoc.php?MaMH=<?php echo $row['MaMH'] ?>" >Xóa</a></td>
         </tr>
         <?php
         }

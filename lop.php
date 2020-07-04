@@ -34,7 +34,9 @@
                 <td><?php echo $datalop_row['MaLop'] ?></td>
                 <td><?php echo $datalop_row['TenLop'] ?></td>
                 <td><?php echo $datalop_row['MaKhoa'] ?></td>
-                <td><a href="SuaLop.php?MaLop=<?php echo $datalop_row['MaLop']?>">Sửa</a><a href="XoaLop.php?MaLop=">Xóa</a></td>
+                <td><a href="SuaLop.php?MaLop=<?php echo $datalop_row['MaLop']?>">Sửa</a>-
+                    <a href="XoaLop.php?MaLop=<?php echo $datalop_row['MaLop']?>">Xóa</a>
+                </td>
             </tr>
                     <?php
                 }   
