@@ -9,6 +9,7 @@ include_once('DataProvider.php');
             <td>STT</td>
             <td>Ten sv</td>
             <td></td>
+            <td></td>
         </tr>
         <?php
         
@@ -19,20 +20,20 @@ include_once('DataProvider.php');
         else{
             $qr="select * from sinhvien";
         }
-<<<<<<< HEAD
+
         $result=DataProvider::ExecuteQuery($qr);
-=======
+
         
-        $result=mysqli_query($conect,$qr);
->>>>>>> 20f03d4c24965441402fb78caeb36990a0d23f1b
+        
+
         while($row=mysqli_fetch_array($result)){
         ?>
         <tr style="margin:20px !important">
             <td><?php echo $row['MaSV'] ?></td>
         
             <td><?php echo $row['HoTen'] ?></td>
-            <td><a href="">Thêm</a></td>
-            <td><button class="btn btn-primary "  type="button">Mua</button></td>
+            <td><a href="sinhvien.php?MaSV=<?php echo $row['MaSV'] ?>">Thêm</a></td>
+            <td><button class="btn btn-primary "  type="button">Xem</button></td>
         </tr>
         <?php
         }

@@ -48,12 +48,12 @@ include_once('DataProvider.php');
 </script>
 <body>
 <div>
-Loai hoa:
+Loai sv:
 
 <select name="loaisv" id="loaisv">
     <?php
-    $qr="select * from lop";
-    $result_loai=DataProvider::ExecuteQuery($qr);
+    
+    $result_loai=DataProvider::ExecuteQuery('SELECT * FROM lop');
     while($row_loai=mysqli_fetch_array($result_loai)){
     ?>
     <option value="<?php echo $row_loai['MaLop'] ?>"><?php echo $row_loai['TenLop'] ?></option>
