@@ -1,9 +1,10 @@
+
 <?php
 include_once('DataProvider.php');
 ?>
 <div class="col-10">
     <h3 class="text-center">DANH SACH SV</h3>
-    <table class="table-bordered text-center" style="margin:0 auto;width:50%">
+    <table class="table table-bordered text-center" style="margin:0 auto;width:50%">
         <tr>
             <td>STT</td>
             <td>Ten sv</td>
@@ -18,14 +19,14 @@ include_once('DataProvider.php');
         else{
             $qr="select * from sinhvien";
         }
-        $result=mysqli_query($conect,$qr);
+        $result=DataProvider::ExecuteQuery($qr);
         while($row=mysqli_fetch_array($result)){
         ?>
         <tr style="margin:20px !important">
             <td><?php echo $row['MaSV'] ?></td>
         
             <td><?php echo $row['HoTen'] ?></td>
-            
+            <td><a href="">Thêm</a></td>
             <td><button class="btn btn-primary "  type="button">Mua</button></td>
         </tr>
         <?php
