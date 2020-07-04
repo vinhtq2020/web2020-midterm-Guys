@@ -2,14 +2,14 @@
 <?php
 include_once('DataProvider.php');
 ?>
-<div class="col-10">
+<div >
     <h3 class="text-center">DANH SACH SV</h3>
     <table class="table table-bordered text-center" style="margin:0 auto;width:50%">
         <tr>
             <td>STT</td>
             <td>Ten sv</td>
             <td></td>
-            <td></td>
+            
         </tr>
         <?php
         
@@ -32,8 +32,8 @@ include_once('DataProvider.php');
             <td><?php echo $row['MaSV'] ?></td>
         
             <td><?php echo $row['HoTen'] ?></td>
-            <td><a href="sinhvien.php?MaSV=<?php echo $row['MaSV'] ?>">Thêm</a></td>
-            <td><button class="btn btn-primary "  type="button">Xem</button></td>
+            <td><a href="sinhvien.php?MaSV=<?php echo $row['MaSV'] ?>">Xem</a></td>
+            
         </tr>
         <?php
         }
