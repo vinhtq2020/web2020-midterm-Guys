@@ -19,7 +19,12 @@ include_once('DataProvider.php');
         else{
             $qr="select * from sinhvien";
         }
+<<<<<<< HEAD
         $result=DataProvider::ExecuteQuery($qr);
+=======
+        
+        $result=mysqli_query($conect,$qr);
+>>>>>>> 20f03d4c24965441402fb78caeb36990a0d23f1b
         while($row=mysqli_fetch_array($result)){
         ?>
         <tr style="margin:20px !important">
