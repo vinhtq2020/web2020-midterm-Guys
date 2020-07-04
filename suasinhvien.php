@@ -9,9 +9,9 @@ include_once('DataProvider.php');
         $Ngay=$_REQUEST['txtnam'];
         $email=$_REQUEST['txtemail'];
         $malop1=$_REQUEST['chonmalop'];
-        $qrnhap="UPDATE sinhvien SET HoTen='$Tensv', NgaySinh='$Ngay',Email='$email',MaLop='$malop1' WHERE MaLop='$masv'";
+        $qrnhap="UPDATE sinhvien SET HoTen='$Tensv', NgaySinh='$Ngay',Email='$email',MaLop='$malop1' WHERE MaSV='$masv'";
         DataProvider::ExecuteQuery($qrnhap);
-        header(["location:sinhvien.php"]);
+        header("location:locsinhvien.php");
     }
 ?>
 <head>
@@ -31,7 +31,7 @@ include_once('DataProvider.php');
     }
 </style>
 <body>
-<form action="" >
+<form action="" method="POST" >
 <h3 class="text-center">SỬA SINH VIÊN</h3>
     <table class="table-bordered text-center" style="margin:0 auto;width:50%">
         <?php
@@ -71,7 +71,7 @@ include_once('DataProvider.php');
             </td>
         </tr>
         <tr>
-            <td colspan="2"><button class="btn btn-primary"  name="btnthem" type="submit">Them</button></td>
+            <td colspan="2"><button class="btn btn-primary"  name="btnthem" type="submit">Sửa</button></td>
         </tr>
     </table>
 </for
