@@ -18,6 +18,7 @@
 </head>
 
 <body>
+<?php include_once('nav.php'); ?>
 
     <table class="table table-bordered">
         <?php $datalop=DataProvider::ExecuteQuery('SELECT * FROM lop');?>

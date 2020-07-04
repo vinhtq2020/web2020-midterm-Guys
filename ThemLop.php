@@ -23,6 +23,8 @@
     <script src="https://kit.fontawesome.com/e9a3bfa470.js" crossorigin="anonymous"></script>
 </head>
 <body>
+<?php include_once('nav.php'); ?>
+
     <form action="" method="post">
         <table class="table table-bordered">
             <tr>

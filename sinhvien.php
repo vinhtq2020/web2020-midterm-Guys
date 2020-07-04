@@ -2,6 +2,7 @@
 <?php
 $masv=$_GET['MaSV'];
 include_once('DataProvider.php');
+
 ?>
 <head>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
@@ -20,6 +21,7 @@ include_once('DataProvider.php');
     }
 </style>
 <body>
+    <?php include_once('nav.php'); ?>
 <h3 class="text-center">Thong tin SV</h3>
     <table class="table-bordered text-center" style="margin:0 auto;width:50%">
         <tr>

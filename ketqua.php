@@ -2,8 +2,10 @@
 <?php
 include_once('DataProvider.php');
 ?>
+    <?php include_once('nav.php'); ?>
+
 <div >
-    <h3 class="text-center">DANH SACH SV</h3>
+    <h3 class="text-center">ĐIỂM SINH VIÊN</h3>
     <table class="table table-bordered text-center" style="margin:0 auto;width:50%">
         <tr>
             <td>STT</td>

@@ -28,6 +28,8 @@ if(isset($_REQUEST['btnthem'])){
     }
 </style>
 <body>
+<?php include_once('nav.php'); ?>
+
 <form action="" method="post">
 <h3 class="text-center">THEM MON HOC</h3>
     <table class="table-bordered text-center" style="margin:0 auto;width:50%">

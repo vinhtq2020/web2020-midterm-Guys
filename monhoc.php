@@ -19,6 +19,8 @@ include_once('DataProvider.php');
     }
 </style>
 <body>
+<?php include_once('nav.php'); ?>
+
 <h3 class="text-center">DANH SACH MON HOC</h3>
     <table class="table-bordered text-center" style="margin:0 auto;width:50%">
         <tr>

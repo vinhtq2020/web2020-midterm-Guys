@@ -30,6 +30,8 @@ if(isset($_REQUEST['btnsua'])){
     }
 </style>
 <body>
+<?php include_once('nav.php'); ?>
+
 <form method="POST">
 <h3 class="text-center">SUA KHOA</h3>
     <table class="table-bordered text-center" style="margin:0 auto;width:50%">

@@ -4,10 +4,12 @@ include_once('DataProvider.php');
 ?>
 <?php
     if(isset($_REQUEST['btnthem'])){
-        $mon1=$_REQUEST['txtmon'];
-        $masv1=$
+        $mon1=$_REQUEST['chonmamon'];
+        $masv1=$_REQUEST['chonmasinhvien'];
         $diem1=$_REQUEST['txtdiem'];
-
+       echo $qr="INSERT INTO `ketqua` (`MaKQ`, `MaMH`, `MaSV`, `Diem`) VALUES (NULL, '$mon1', '$masv1', '$diem1')";
+        DataProvider::ExecuteQuery($qr);
+        header("location:xemketqasv.php");
     }
 ?>
 <head>
@@ -27,11 +29,13 @@ include_once('DataProvider.php');
     }
 </style>
 <body>
+<?php include_once('nav.php'); ?>
+
 <form action="" method="POST" >
 <h3 class="text-center">THÊM ĐIỂM</h3>
     <table class="table-bordered text-center" style="margin:0 auto;width:50%">
     <tr>
-            <td>Mã Lớp</td>
+            <td>Môn Học</td>
             <td>
                 <select name="chonmamon" id="chonmamon">
                     <?php
@@ -40,23 +44,23 @@ include_once('DataProvider.php');
 
                         
                     ?>
-                        <option  value="<?php echo $row_lop['MaLop'] ?>"><?php echo $row_lop['TenMH'] ?></option>
+                        <option  value="<?php echo $row_lop['MaMH'] ?>"><?php echo $row_lop['TenMH'] ?></option>
                     <?php
                         }
                     ?>
                 </select>
             </td>
         <tr>
-            <td>Mã SV</td>
+            <td>Sinh Viên</td>
             <td>
-                <select name="chonmamon" id="chonmamon">
+                <select name="chonmasinhvien">
                     <?php
                         $qr=DataProvider::ExecuteQuery("SELECT*FROM sinhvien");
                         while($row_lopsv=mysqli_fetch_array($qr)){
 
                         
                     ?>
-                        <option  value="<?php echo $row_lop['MaLop'] ?>"><?php echo $row_lopsv['HoTen'] ?></option>
+                        <option  value="<?php echo $row_lopsv['MaSV'] ?>"><?php echo $row_lopsv['HoTen'] ?></option>
                     <?php
                         }
                     ?>
@@ -69,7 +73,7 @@ include_once('DataProvider.php');
         </tr>
         
         <tr>
-            <td colspan="2"><button class="btn btn-primary"  name="btnthem" type="submit">Sửa</button></td>
+            <td colspan="2"><button class="btn btn-primary"  name="btnthem" type="submit">Thêm</button></td>
         </tr>
     </table>
 </form>
