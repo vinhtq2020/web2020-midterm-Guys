@@ -59,6 +59,7 @@ Loai sv:
     <option value="<?php echo $row_loai['MaLop'] ?>"><?php echo $row_loai['TenLop'] ?></option>
     <?php
     }
+    
     ?>
 </select>
 
