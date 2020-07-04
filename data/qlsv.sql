@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th7 04, 2020 lúc 03:42 AM
+-- Thời gian đã tạo: Th7 04, 2020 lúc 04:19 AM
 -- Phiên bản máy phục vụ: 10.4.11-MariaDB
--- Phiên bản PHP: 7.4.4
+-- Phiên bản PHP: 7.4.5
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -95,16 +95,16 @@ CREATE TABLE `lop` (
 --
 
 INSERT INTO `lop` (`MaLop`, `TenLop`, `MaKhoa`) VALUES
-(1, 'CNTT-A', 1),
-(2, 'Luật-A', 5),
-(3, 'GDTC-D', 6),
-(4, 'Toán-A', 8),
-(5, 'CNTT-NNN-A', 4),
-(6, 'Hớt Tóc-A', 10),
-(7, 'Hóa-A', 7),
+(1, 'CNTT-C', 1),
+(2, 'Luật-B', 5),
+(3, 'GDTC-A', 6),
+(4, 'Toán-C', 8),
+(5, 'CNTT-NNN-C', 4),
+(6, 'Hớt Tóc-B', 10),
+(7, 'Hóa-B', 7),
 (8, 'Tâm Lý Học-A', 2),
-(9, 'GDMN-B', 3),
-(10, 'Lý-C', 9);
+(9, 'GDMN-A', 3),
+(10, 'Lý-A', 9);
 
 -- --------------------------------------------------------
 
@@ -153,10 +153,10 @@ CREATE TABLE `sinhvien` (
 --
 
 INSERT INTO `sinhvien` (`MaSV`, `HoTen`, `NgaySinh`, `Email`, `MaLop`) VALUES
-(1, 'Nguyễn Văn A', '2000-04-22', 'Adeptraivodich@yahoo.com', 1),
+(1, 'Nguyễn Văn B', '2000-04-22', 'Blaso1@yahoo.com', 1),
 (2, 'Trần Đức Bo', '1998-08-10', 'bodeptraivodich@yahoo.com', 2),
 (3, 'Bùi Xuân Huấn', '1969-04-16', 'huanrose@yahoo.com', 2),
-(4, 'Nguyễn Văn C', '1986-12-20', 'Cdeptraivodich@yahoo.com', 1),
+(4, 'Nguyễn Văn Dần', '1986-12-20', 'Dancuteprovip@yahoo.com', 1),
 (5, 'Nguyễn Thanh Tùng', '1998-07-05', 'tungdeptrai@yahoo.com', 10),
 (6, 'Nguyễn Thị Thiên Nhiên', '1997-12-07', 'nhiendepgai@yahoo.com', 5),
 (7, 'Trần Thị Quy Hoạch Động', '1969-11-08', 'dongdepgai@yahoo.com', 3),
