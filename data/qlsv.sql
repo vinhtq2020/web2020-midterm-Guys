@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th7 04, 2020 lúc 03:11 AM
+-- Thời gian đã tạo: Th7 04, 2020 lúc 03:42 AM
 -- Phiên bản máy phục vụ: 10.4.11-MariaDB
 -- Phiên bản PHP: 7.4.4
 
@@ -34,6 +34,22 @@ CREATE TABLE `ketqua` (
   `Diem` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- Đang đổ dữ liệu cho bảng `ketqua`
+--
+
+INSERT INTO `ketqua` (`MaKQ`, `MaMH`, `MaSV`, `Diem`) VALUES
+(1, 8, 2, 10),
+(2, 6, 7, 9),
+(3, 7, 10, 7),
+(4, 2, 9, 10),
+(5, 3, 3, 8),
+(6, 5, 4, 4),
+(7, 5, 5, 2),
+(8, 1, 1, 1),
+(9, 10, 8, 8),
+(10, 4, 6, 10);
+
 -- --------------------------------------------------------
 
 --
@@ -45,6 +61,22 @@ CREATE TABLE `khoa` (
   `TenKhoa` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
   `NamThanhLap` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `khoa`
+--
+
+INSERT INTO `khoa` (`MaKhoa`, `TenKhoa`, `NamThanhLap`) VALUES
+(1, 'CNTT', 1989),
+(2, 'Tâm Lí Học', 1990),
+(3, 'Giáo Dục Mầm Non', 1991),
+(4, 'CNTT-Ngôn Ngữ Nhật', 1889),
+(5, 'Luật', 1880),
+(6, 'Giáo Dục Thể Chất', 1945),
+(7, 'Hóa', 1946),
+(8, 'Toán', 1985),
+(9, 'Lý', 1986),
+(10, 'Hớt tóc', 1969);
 
 -- --------------------------------------------------------
 
@@ -58,6 +90,22 @@ CREATE TABLE `lop` (
   `MaKhoa` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+--
+-- Đang đổ dữ liệu cho bảng `lop`
+--
+
+INSERT INTO `lop` (`MaLop`, `TenLop`, `MaKhoa`) VALUES
+(1, 'CNTT-A', 1),
+(2, 'Luật-A', 5),
+(3, 'GDTC-D', 6),
+(4, 'Toán-A', 8),
+(5, 'CNTT-NNN-A', 4),
+(6, 'Hớt Tóc-A', 10),
+(7, 'Hóa-A', 7),
+(8, 'Tâm Lý Học-A', 2),
+(9, 'GDMN-B', 3),
+(10, 'Lý-C', 9);
+
 -- --------------------------------------------------------
 
 --
@@ -69,6 +117,22 @@ CREATE TABLE `monhoc` (
   `TenMH` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
   `SoTC` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `monhoc`
+--
+
+INSERT INTO `monhoc` (`MaMH`, `TenMH`, `SoTC`) VALUES
+(1, 'Quy Hoạch Tuyến Tính', 3),
+(2, 'Hớt Tóc Nâng Cao', 5),
+(3, 'Lập Trình Nâng Cao', 4),
+(4, 'Hóa đại cương', 3),
+(5, 'Lý đại cương', 3),
+(6, 'Quy Luật Toán học và mối quan hệ với vũ trụ', 6),
+(7, 'Dạy trẻ tập đọc', 4),
+(8, 'Cử Tạ', 2),
+(9, 'Tâm lý học đại cương', 5),
+(10, 'Lập trình hướng đối tượng', 3);
 
 -- --------------------------------------------------------
 
@@ -83,6 +147,22 @@ CREATE TABLE `sinhvien` (
   `Email` varchar(200) COLLATE utf8_unicode_ci NOT NULL,
   `MaLop` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Đang đổ dữ liệu cho bảng `sinhvien`
+--
+
+INSERT INTO `sinhvien` (`MaSV`, `HoTen`, `NgaySinh`, `Email`, `MaLop`) VALUES
+(1, 'Nguyễn Văn A', '2000-04-22', 'Adeptraivodich@yahoo.com', 1),
+(2, 'Trần Đức Bo', '1998-08-10', 'bodeptraivodich@yahoo.com', 2),
+(3, 'Bùi Xuân Huấn', '1969-04-16', 'huanrose@yahoo.com', 2),
+(4, 'Nguyễn Văn C', '1986-12-20', 'Cdeptraivodich@yahoo.com', 1),
+(5, 'Nguyễn Thanh Tùng', '1998-07-05', 'tungdeptrai@yahoo.com', 10),
+(6, 'Nguyễn Thị Thiên Nhiên', '1997-12-07', 'nhiendepgai@yahoo.com', 5),
+(7, 'Trần Thị Quy Hoạch Động', '1969-11-08', 'dongdepgai@yahoo.com', 3),
+(8, 'Count Ba Squad', '1997-11-05', 'squad@yahoo.com', 6),
+(9, 'Tào Tháo', '1995-05-05', 'thaoracingboiz@yahoo.com', 8),
+(10, 'Lữ Bố', '1997-07-05', 'bodeptrai@yahoo.com', 9);
 
 --
 -- Chỉ mục cho các bảng đã đổ
@@ -130,31 +210,31 @@ ALTER TABLE `sinhvien`
 -- AUTO_INCREMENT cho bảng `ketqua`
 --
 ALTER TABLE `ketqua`
-  MODIFY `MaKQ` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `MaKQ` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT cho bảng `khoa`
 --
 ALTER TABLE `khoa`
-  MODIFY `MaKhoa` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `MaKhoa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT cho bảng `lop`
 --
 ALTER TABLE `lop`
-  MODIFY `MaLop` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `MaLop` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT cho bảng `monhoc`
 --
 ALTER TABLE `monhoc`
-  MODIFY `MaMH` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `MaMH` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT cho bảng `sinhvien`
 --
 ALTER TABLE `sinhvien`
-  MODIFY `MaSV` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `MaSV` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- Các ràng buộc cho các bảng đã đổ
