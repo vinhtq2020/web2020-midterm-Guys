@@ -10,7 +10,7 @@ include_once('DataProvider.php');
             <td>Ten sv</td>
             <td>Ten MH</td>
             <td>Diem</td>
-            <td colspan="3"><a href="ThemSinhVien.php">Thêm</a></td>
+            <td colspan="3"><a href="ThemDiem.php">Thêm</a></td>
             
         </tr>
         <?php
