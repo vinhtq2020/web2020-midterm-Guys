@@ -47,7 +47,7 @@ include_once('DataProvider.php');
     
 </script>
 <body>
-<?php include_once('nav.php'); ?>
+
 
 <div>
 Loai sv:

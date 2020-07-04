@@ -18,7 +18,8 @@ include_once('DataProvider.php');
         
         if(isset($_REQUEST['loaisv'])){
             $loai=$_REQUEST['loaisv'];
-            $qr="SELECT * FROM `ketqua`,sinhvien,monhoc WHERE ketqua.MaSV=sinhvien.MaSV and ketqua.MaMH=monhoc.MaMH and sinhvien.MaSV=$loai";
+            $lop=$_REQUEST['lop'];
+            $qr="SELECT * FROM `ketqua`,sinhvien,monhoc,lop WHERE ketqua.MaSV=sinhvien.MaSV and ketqua.MaMH=monhoc.MaMH and sinhvien.MaLop=lop.MaLop and sinhvien.MaSV=$loai and sinhvien.MaLop=$lop";
         }
         else{
             $qr="select * from sinhvien";

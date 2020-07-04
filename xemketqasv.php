@@ -26,7 +26,8 @@ include_once('DataProvider.php');
                 url: 'ketqua.php',
                 type: 'post',
                 data: {
-                    'loaisv': $('#loaisv').val()
+                    'loaisv': $('#loaisv').val(),
+                    'lop': $('#loailop').val()
                 },
                 success: function(data){
                     $('#dssv').html(data);
@@ -50,21 +51,35 @@ include_once('DataProvider.php');
 <?php include_once('nav.php'); ?>
 
 <div>
-Loai sv:
+MônHọc:
 
 <select name="loaisv" id="loaisv">
     <?php
     
-    $result_loai=DataProvider::ExecuteQuery('SELECT * FROM sinhvien');
+    $result_loai=DataProvider::ExecuteQuery('SELECT * FROM MonHoc');
     while($row_loai=mysqli_fetch_array($result_loai)){
     ?>
-    <option value="<?php echo $row_loai['MaSV'] ?>"><?php echo $row_loai['HoTen'] ?></option>
+    <option value="<?php echo $row_loai['MaMH'] ?>"><?php echo $row_loai['TenMH'] ?></option>
     <?php
     }
     
     ?>
 </select>
+<br>
+Tên Lớp:
 
+<select name="loailop" id="loailop">
+    <?php
+    
+    $result_loai=DataProvider::ExecuteQuery('SELECT * FROM lop');
+    while($row_loai=mysqli_fetch_array($result_loai)){
+    ?>
+    <option value="<?php echo $row_loai['MaLop'] ?>"><?php echo $row_loai['TenLop'] ?></option>
+    <?php
+    }
+    
+    ?>
+</select>
 </div>
 <div id="dssv">
 
