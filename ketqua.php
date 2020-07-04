@@ -15,11 +15,13 @@ include_once('DataProvider.php');
             
         </tr>
         <?php
+        $loai=$_REQUEST['loaisv'];
         
         if(isset($_REQUEST['loaisv'])){
             $loai=$_REQUEST['loaisv'];
             $lop=$_REQUEST['lop'];
-            $qr="SELECT * FROM `ketqua`,sinhvien,monhoc,lop WHERE ketqua.MaSV=sinhvien.MaSV and ketqua.MaMH=monhoc.MaMH and sinhvien.MaLop=lop.MaLop and sinhvien.MaSV=$loai";
+            
+            $qr="SELECT * FROM `ketqua`,sinhvien,monhoc,lop WHERE ketqua.MaSV=sinhvien.MaSV and ketqua.MaMH=monhoc.MaMH and sinhvien.MaLop=lop.MaLop and monhoc.MaMH=$loai";
         }
         else{
             $qr="select * from sinhvien";

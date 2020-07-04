@@ -26,7 +26,7 @@ include_once('DataProvider.php');
         <tr>
             <td>Ma Môn</td>
             <td>Tên khoa</td>
-            <td>Số tính chỉ</td>
+            <td>Số tín chỉ</td>
             <td></td>
         </tr>
         <?php
