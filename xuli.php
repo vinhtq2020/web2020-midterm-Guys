@@ -8,7 +8,7 @@ include_once('DataProvider.php');
         <tr>
             <td>STT</td>
             <td>Ten sv</td>
-            <td colspan="3"></td>
+            <td colspan="3"><a href="ThemSinhVien.php">Thêm</a></td>
             
         </tr>
         <?php
