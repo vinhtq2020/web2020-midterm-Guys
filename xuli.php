@@ -18,6 +18,7 @@ include_once('DataProvider.php');
         else{
             $qr="select * from sinhvien";
         }
+        
         $result=mysqli_query($conect,$qr);
         while($row=mysqli_fetch_array($result)){
         ?>
