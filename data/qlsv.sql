@@ -123,6 +123,7 @@ CREATE TABLE `monhoc` (
 --
 
 INSERT INTO `monhoc` (`MaMH`, `TenMH`, `SoTC`) VALUES
+<<<<<<< HEAD
 (1, 'Quy Hoạch Tuyến Tính', 5),
 (2, 'Hớt Tóc Nâng Cao', 6),
 (3, 'Lập Trình Nâng Cao', 2),
@@ -130,6 +131,15 @@ INSERT INTO `monhoc` (`MaMH`, `TenMH`, `SoTC`) VALUES
 (5, 'Lý đại cương', 2),
 (6, 'Quy Luật Toán học và mối quan hệ với vũ trụ', 5),
 (7, 'Dạy trẻ tập đọc', 3),
+=======
+(1, 'Quy Hoạch Tuyến Tính', 3),
+(2, 'Hớt Tóc Nâng Cao', 5),
+(3, 'Lập Trình Nâng Cao', 4),
+(4, 'Hóa đại cương', 3),
+(5, 'Lý đại cương', 3),
+(6, 'Quy Luật Toán học và mối quan hệ với vũ trụ', 6),
+(7, 'Dạy trẻ tập đọc', 4),
+>>>>>>> c87857286487e0357bbbd2298e6c238233bb861e
 (8, 'Cử Tạ', 2),
 (9, 'Tâm lý học đại cương', 2),
 (10, 'Lập trình hướng đối tượng', 4);
@@ -153,16 +163,16 @@ CREATE TABLE `sinhvien` (
 --
 
 INSERT INTO `sinhvien` (`MaSV`, `HoTen`, `NgaySinh`, `Email`, `MaLop`) VALUES
-(1, 'Nguyễn Văn B', '2000-04-22', 'Blaso1@yahoo.com', 1),
-(2, 'Trần Đức Bo', '1998-08-10', 'bodeptraivodich@yahoo.com', 2),
-(3, 'Bùi Xuân Huấn', '1969-04-16', 'huanrose@yahoo.com', 2),
-(4, 'Nguyễn Văn Dần', '1986-12-20', 'Dancuteprovip@yahoo.com', 1),
-(5, 'Nguyễn Thanh Tùng', '1998-07-05', 'tungdeptrai@yahoo.com', 10),
-(6, 'Nguyễn Thị Thiên Nhiên', '1997-12-07', 'nhiendepgai@yahoo.com', 5),
-(7, 'Trần Thị Quy Hoạch Động', '1969-11-08', 'dongdepgai@yahoo.com', 3),
-(8, 'Count Ba Squad', '1997-11-05', 'squad@yahoo.com', 6),
-(9, 'Tào Tháo', '1995-05-05', 'thaoracingboiz@yahoo.com', 8),
-(10, 'Lữ Bố', '1997-07-05', 'bodeptrai@yahoo.com', 9);
+(1, 'Nguyễn Văn B', '2000-04-22', 'Blaso12@yahoo.com', 1),
+(2, 'Trần Đức Bo', '1998-08-10', 'bodeptraivodich1@yahoo.com', 2),
+(3, 'Bùi Xuân Huấn', '1969-04-16', 'huanrose1@yahoo.com', 2),
+(4, 'Nguyễn Văn Dần', '1986-12-20', 'Dancuteprovip01@yahoo.com', 1),
+(5, 'Nguyễn Thanh Tùng', '1998-07-05', 'tungdeptrai53@yahoo.com', 10),
+(6, 'Nguyễn Thị Nhiên', '1997-12-07', 'nhiendepgai15@yahoo.com', 5),
+(7, 'Trần Thị Nhẫ', '1969-11-06', 'dongdepgai28@yahoo.com', 3),
+(8, 'Lâm Minh Chí', '1997-11-01', 'squad124@yahoo.com', 6),
+(9, 'Vũ Tuấn Hưng', '1995-05-02', 'thaoracingboiz@yahoo.com', 8),
+(10, 'Trần Đức Minh', '1997-07-04', 'bodeptrai12@yahoo.com', 9);
 
 --
 -- Chỉ mục cho các bảng đã đổ
