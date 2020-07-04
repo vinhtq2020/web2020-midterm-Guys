@@ -3,15 +3,11 @@
 include_once('DataProvider.php');
 ?>
 <?php
-   
     if(isset($_REQUEST['btnthem'])){
-        $Tensv=$_REQUEST['txtten'];
-        $Ngay=$_REQUEST['txtnam'];
-        $email=$_REQUEST['txtemail'];
-        $malop1=$_REQUEST['chonmalop'];
-        $qrnhap="INSERT INTO sinhvien(HoTen,NgaySinh,Email,MaLop) VALUE('$Tensv','$Ngay','$email','$malop1')";
-        DataProvider::ExecuteQuery($qrnhap);
-        header("location:locsinhvien.php");
+        $mon1=$_REQUEST['txtmon'];
+        $masv1=$
+        $diem1=$_REQUEST['txtdiem'];
+
     }
 ?>
 <head>
@@ -32,41 +28,46 @@ include_once('DataProvider.php');
 </style>
 <body>
 <form action="" method="POST" >
-<h3 class="text-center">SỬA SINH VIÊN</h3>
+<h3 class="text-center">THÊM ĐIỂM</h3>
     <table class="table-bordered text-center" style="margin:0 auto;width:50%">
-       
-        <tr>
-            
-            <td>Tên Sinh Viên</td>
-            <td><input class="form-control" name="txtten" type="text" value="" ></td>
-        </tr>
-        
-        
-        <tr>
-            <td>Ngày sinh</td>
-            <td><input class="form-control" name="txtnam"></td>
-        </tr>
-        <tr>
-            <td>Email</td>
-            <td><input class="form-control" name="txtemail" type="text"></td>
-        </tr>
-        <tr>
+    <tr>
             <td>Mã Lớp</td>
             <td>
-                <select name="chonmalop" id="chonmalop">
+                <select name="chonmamon" id="chonmamon">
                     <?php
-                        $qr=DataProvider::ExecuteQuery("SELECT*FROM lop");
+                        $qr=DataProvider::ExecuteQuery("SELECT*FROM monhoc");
                         while($row_lop=mysqli_fetch_array($qr)){
 
                         
                     ?>
-                        <option  value="<?php echo $row_lop['MaLop'] ?>"><?php echo $row_lop['TenLop'] ?></option>
+                        <option  value="<?php echo $row_lop['MaLop'] ?>"><?php echo $row_lop['TenMH'] ?></option>
+                    <?php
+                        }
+                    ?>
+                </select>
+            </td>
+        <tr>
+            <td>Mã SV</td>
+            <td>
+                <select name="chonmamon" id="chonmamon">
+                    <?php
+                        $qr=DataProvider::ExecuteQuery("SELECT*FROM sinhvien");
+                        while($row_lopsv=mysqli_fetch_array($qr)){
+
+                        
+                    ?>
+                        <option  value="<?php echo $row_lop['MaLop'] ?>"><?php echo $row_lopsv['HoTen'] ?></option>
                     <?php
                         }
                     ?>
                 </select>
             </td>
         </tr>
+        <tr>
+            <td>Điểm</td>
+            <td><input class="form-control" name="txtdiem" type="number"></td>
+        </tr>
+        
         <tr>
             <td colspan="2"><button class="btn btn-primary"  name="btnthem" type="submit">Sửa</button></td>
         </tr>
